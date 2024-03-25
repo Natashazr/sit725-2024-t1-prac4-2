@@ -33,26 +33,7 @@ const submitForm = () => {
     postCat(formData);
 }
 
-function postCat(cat){
-    $.ajax({
-        url:'/api/cat',
-        type:'POST',
-        data:cat,
-        success: (result)=>{
-            if (result.statusCode === 201){
-                alert('cat post successful');
-            }
-        }
-    });
-}
-
-function getAllCats(){
-    $.get('/api/cats', (response) => {
-        if (response.statusCode === 200){
-            addCards(response.data);
-        }
-    });
-}
+//* update your own code 
 
 $(document).ready(function(){
     $('.materialboxed').materialbox();
